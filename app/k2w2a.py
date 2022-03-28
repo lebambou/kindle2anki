@@ -16,7 +16,7 @@ import pdb
 class WikiParser:
     # build a word list from frequency database
     def get_word_list(self):
-        file_loc = r"C:\Users\npnew\OneDrive\Documents\dev\k2w2a\app\data\Manulex.xls"
+        file_loc = r"I:\GitHubkindle2anki\kindle2anki\app\data\Manulex.xls"
         df = pd.read_excel(file_loc, index_col=None, na_values=[''],
                             usecols = "A,R")
         return df
@@ -26,7 +26,7 @@ class WikiParser:
         return df
 
     def word_list_to_parquet(self):
-        file_loc = r"C:\Users\npnew\OneDrive\Documents\dev\k2w2a\app\data\Manulex.xls"
+        file_loc = r"I:\GitHubkindle2anki\kindle2anki\app\data\Manulex.xls"
         df = pd.read_excel(file_loc, index_col=None, na_values=[''],
                             usecols = "A,R")
         df.to_parquet('data/Manulex.gzip', compression ='gzip')
